@@ -8,9 +8,9 @@ metadata:
   name: {{ .Release.Name }}-nextjs-svc
 spec:
   ports:
-  - port: 80
-    protocol: TCP
-    targetPort: 80
+  - port: {{ .Values.ports.port }}
+    protocol: {{ .Values.ports.protocol }}
+    targetPort: {{ .Values.ports.targetPort }}
   selector:
     app: nextjs
 status:

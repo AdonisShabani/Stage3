@@ -16,4 +16,4 @@ spec:
           service: 
             name: {{ .Release.Name }}-nextjs-svc
             port:
-              number: 80
+              number: {{ .Values.ports.port }}
